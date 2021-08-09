@@ -4,6 +4,7 @@ This project was developed with the following technologies:
 
 - [React](https://reactjs.org/)
 - [Automatict Test](https://pt-br.reactjs.org/docs/testing-environments.html)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 ## :rocket: How to run
 

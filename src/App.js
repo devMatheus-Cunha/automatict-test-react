@@ -11,12 +11,7 @@ function App() {
 
       <Dropdown
         title="Selecione uma opção"
-        options={[
-          "Minas Gerais",
-          "São Paulo",
-          "Rio de Janeiro",
-          "Rio gradne do Sul",
-        ]}
+        options={["Minas Gerais", "São Paulo", "Rio de Janeiro"]}
         onSelect={setSelectedState}
       />
     </div>
