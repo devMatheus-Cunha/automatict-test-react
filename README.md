@@ -9,16 +9,20 @@ This project was developed with the following technologies:
 
 Clone the project and access the project folder.
 
-$ git clone https://github.com/devMatheus-Gomes/automatict-test-react.git
-$ cd automatict-test-react
-
+```bash
+$ git clone https://github.com/devMatheus-Gomes/ui-clone-twitter.git
+$ cd ui-clone-twitter
+```
 
 To start it, follow the steps below:
+```bash
 # Install the dependencies
 $ npm i
 
 # Start the project
 $ npm start
+
+```
 
 The app will be available in your browser at http://localhost:3000/.
 
