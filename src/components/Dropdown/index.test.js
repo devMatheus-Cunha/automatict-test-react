@@ -13,7 +13,7 @@ describe("Dropdown", () => {
     expect(screen.queryByText(options[2])).not.toBeInTheDocument();
   });
 
-  //! want to test if the dropdown will show menu options when it is clicked
+  //! I want to test if the dropdown will show menu options when it is clicked
   it("should sho options when open", () => {
     render(<Dropdown title={title} options={options} onSelect={() => {}} />);
 
@@ -47,13 +47,12 @@ describe("Dropdown", () => {
     ).toBeInTheDocument();
   });
 
+  //! I want that when I select a menu item it closes the dropwdawn and indicates which option was chosen
   it("should signal an option was selected and close the dropdown", () => {
-    render(<Dropdown title={title} options={options} onSelect={() => {}} />);
+    // function mock
+    const onSelect = jest.fn()
 
-    // checks that you don't have these values on the screen
-    expect(screen.queryByText(options[0])).not.toBeInTheDocument();
-    expect(screen.queryByText(options[1])).not.toBeInTheDocument();
-    expect(screen.queryByText(options[2])).not.toBeInTheDocument();
+    render(<Dropdown title={title} options={options} onSelect={onSelect} />);
 
     //find the button and its click
     userEvent.click(
@@ -78,5 +77,15 @@ describe("Dropdown", () => {
         name: options[2],
       })
     ).toBeInTheDocument();
+
+    userEvent.click(screen.getByRole("menuitem", {name: options[1]}))
+
+    // step to function which option is being selected
+    expect(onSelect).toHaveBeenCalledWith(options[1])
+
+    // checks that you don't have these values on the screen
+    expect(screen.queryByText(options[0])).not.toBeInTheDocument();
+    expect(screen.queryByText(options[1])).not.toBeInTheDocument();
+    expect(screen.queryByText(options[2])).not.toBeInTheDocument();
   });
 });
