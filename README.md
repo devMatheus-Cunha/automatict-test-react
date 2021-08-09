@@ -11,8 +11,8 @@ This project was developed with the following technologies:
 Clone the project and access the project folder.
 
 ```bash
-$ git clone https://github.com/devMatheus-Gomes/ui-clone-twitter.git
-$ cd ui-clone-twitter
+$ git clone https://github.com/devMatheus-Gomes/automatict-test-react.git
+$ cd automatict-test-react
 ```
 
 To start it, follow the steps below:
