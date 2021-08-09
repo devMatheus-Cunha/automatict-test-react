@@ -14,7 +14,7 @@ export function Dropdown({ title, options, onSelect }) {
       <button onClick={() => setIsOpen(true)}>{title}</button>
 
       {isOpen && (
-        <ul ole="menu">
+        <ul role="menu">
           {options.map((option) => (
             <li
               key={option}
