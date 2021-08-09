@@ -1,6 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 
+import styles from "../../styles.module.scss"
+
 export function Dropdown({ title, options, onSelect }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,7 +12,7 @@ export function Dropdown({ title, options, onSelect }) {
   };
 
   return (
-    <div className="dropdown">
+    <div className={styles.dropdown}>
       <button onClick={() => setIsOpen(true)}>{title}</button>
 
       {isOpen && (
